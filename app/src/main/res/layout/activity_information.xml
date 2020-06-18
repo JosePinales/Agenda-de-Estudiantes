@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".information"
+    tools:ignore="ExtraText">
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="189dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="293dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/textview"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="176dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textview"
+        android:textSize="30sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bfecha"
+        android:layout_width="131dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="@string/add_birth_day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintVertical_bias="0.047"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/map"
+        android:layout_width="109dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toEndOf="@+id/bfecha"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintVertical_bias="0.066"
+        android:onClick="map"
+        />
+
+    <Button
+        android:id="@+id/back2"
+        android:layout_width="126dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="click2"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/map"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintVertical_bias="0.084"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/efecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cumplea_os"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

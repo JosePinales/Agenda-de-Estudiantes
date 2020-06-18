@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="back">Back</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="textview">TextView</string>
+    <string name="add_birth_day">Add Birth Day</string>
+    <string name="map">Map</string>
+    <string name="cumplea_os">Cumpleaños</string>
+</resources>
