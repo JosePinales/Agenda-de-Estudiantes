@@ -4,15 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.EditText;
+import android.widget.DatePicker; 
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.Calendar;
 
 public class information extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +23,14 @@ public class information extends AppCompatActivity implements View.OnClickListen
     int image;
 
     String longitud, latitud, direccion;
+
+
+    TextView text1;
+    private int year1, month1, day1, yearini, sMonthIni, sDayIni;
+    static final int DATE_ID = 0;
+    Calendar C = Calendar.getInstance();
+
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -56,6 +62,45 @@ public class information extends AppCompatActivity implements View.OnClickListen
         latitud=la[1];
         longitud=lo[1];
 
+        //calendar
+        sMonthIni = C.get(Calendar.MONTH);
+        sDayIni = C.get(Calendar.DAY_OF_MONTH);
+        yearini = C.get(Calendar.YEAR);
+        text1 =  findViewById(R.id.addb);
+
+        text1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showDialog(DATE_ID);
+            }
+        });
+    }
+
+    private void setdate() {
+        text1.setText((month1 + 1) + "-" + day1 + "-" + year1+" ");
+    }
+
+    private DatePickerDialog.OnDateSetListener mDateSetListener =
+            new DatePickerDialog.OnDateSetListener() {
+                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    year1 = year;
+                    month1 = monthOfYear;
+                    day1 = dayOfMonth;
+                    setdate();
+
+                }
+
+            };
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id) {
+            case DATE_ID:
+                return new DatePickerDialog(this, mDateSetListener, yearini, sMonthIni, sDayIni);
+
+        }
+        return null;
     }
 
     public void click2(View view) {
